@@ -1,0 +1,313 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 2px rgb(93, 14, 14);
+}
+.border {
+    border: solid 1px black;
+    /* background-color: #d3d3d3; */
+}
+header {
+    background-image: url("https://www.telam.com.ar/thumbs/bluesteel/advf/imagenes/2021/07/60ec965bb2473_900.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+span {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px ;
+}
+span:hover {
+    border-left: solid 10px red;
+}
+/* Nombrar Areas */
+header {
+    grid-area: cabeza;
+ }
+ footer {
+    grid-area: pie;
+ }
+ #productos {
+    grid-area: productos;     
+ }
+ #servicios {
+    grid-area: servicios;
+    background-color: rgb(49, 203, 227);   
+ }
+ nav {
+    grid-area: menu;
+ }
+ aside {
+    grid-area: brazo;
+ }
+ footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #d3d3d3;
+    text-align: center;
+}
+/* ! MEDIA QUERIES */
+/* SINTAXIS -->
+@media (condicion: valorpx) {
+             estilos 
+}
+*/
+
+ /* RESPONSIVE DESIGN */
+/* Desktop */
+
+/* Tablet */
+        /* estilos */
+
+/* Smartphone */
+        /* estilos */
+
+        
+
+
+
+/* MOBILE FIRST */
+/* Smartphone*/
+@media (max-width: 480px){
+    h1 {
+        font-size: 2rem;
+    }
+    article {
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        box-shadow: 2px 2px 2px #848484;
+    }
+    h3 {
+        margin: 7px;
+        text-transform: uppercase;
+    }
+    article img {
+        width: 100%;
+    }
+     article p {
+         text-align: justify;
+         margin: 10px;
+     }
+     figure {
+         padding: 10px;
+     }
+     figure img {
+        width: 100%;
+    }
+    figcaption {
+        text-align: right;
+        font-size: 0.65rem;
+    }
+    blockquote {
+        margin: 20px;
+        font-size: 1.5rem;
+        font-family: serif;
+        text-align: justify;
+    }
+    aside p{
+        padding: 10px;
+    }
+    /* Estilos GRIDS por AREAS */
+    #grilla-areas {
+        display: grid;
+        /* Estructura grid por areas */
+        grid-template-areas: 
+        /* 3 columnas y 4 filas */
+        "menu" /* fila 1 */
+        "cabeza"
+        "productos"/* fila 2 */
+        "brazo"
+        "servicios"/* fila 3 */
+        "pie"/* fila 4 */
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 20vh 1fr 1fr 20vh 1fr;
+        /* Espacios */
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    /* FLEXs */
+    .menuFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: rgb(14, 48, 93);  
+    }
+    .flexProductos {
+        display: flex;
+        flex-flow: column nowrap;
+   
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1023px){
+    h1 {
+        font-size: 3rem;
+    }
+    header {
+        height: 25vh;
+        background-color: rgb(58, 183, 197);
+    }
+    span {
+        padding: 10px 40px;
+    }
+     /* Estilos GRIDS por AREAS */
+     #grilla-areas {
+        display: grid;
+        /* Estructura grid por areas */
+        grid-template-areas: 
+        /* 3 columnas y 4 filas */
+        "cabeza cabeza" /* fila 1 */
+        "menu menu"
+        "productos productos"/* fila 2 */
+        "servicios brazo"/* fila 3 */
+        "pie pie"/* fila 4 */
+        ;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5, 1fr);
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    article {
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        box-shadow: 2px 2px 2px #848484;
+    }
+    h3 {
+        margin: 7px;
+        text-transform: uppercase;
+    }
+    article img {
+        width: 100%;
+    }
+     article p {
+         text-align: justify;
+         margin: 10px;
+     }
+     figure {
+         padding: 10px;
+     }
+     figure img {
+        width: 100%;
+    }
+    /* FLEXs */
+    .menuFlex {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: rgb(14, 48, 93); 
+        justify-content: space-evenly; 
+    }
+    .flexProductos {
+        display: flex;
+        flex-flow: row nowrap;
+   
+    }
+}
+/* Desktop */
+@media (min-width: 1024px){
+    body {
+        background-color: rgb(14, 48, 93);
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    span {
+        background-color: #fff;
+        margin-bottom: 30px;
+        padding: 40px ;
+    }
+    span:hover {
+        border-left: solid 20px red;
+    }
+    article {
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        box-shadow: 2px 2px 2px #848484;
+    }
+    h3 {
+        margin: 7px;
+        text-transform: uppercase;
+    }
+    aside {
+        height: 100%;
+    }
+    article img {
+        width: 100%;
+    }
+     article p {
+         text-align: justify;
+         margin: 10px;
+         
+     }
+     figure {
+         padding: 10px;
+     }
+     figure img {
+        width: 100%;
+    }
+    figcaption {
+        text-align: right;
+        font-size: 0.65rem;
+    }
+    blockquote {
+        margin: 20px;
+        font-size: 1.5rem;
+        font-family: serif;
+        text-align: justify;
+    }
+    aside p{
+        padding: 10px;
+        color: #d3d3d3;
+    }
+    
+    
+    /* Estilos GRIDS por AREAS */
+    #grilla-areas {
+        display: grid;
+        /* Estructura grid por areas */
+        grid-template-areas: 
+        /* 3 columnas y 4 filas */
+        "menu cabeza cabeza" /* fila 1 */
+        "menu productos brazo"/* fila 2 */
+        "menu servicios brazo"/* fila 3 */
+        "menu pie pie"/* fila 4 */
+        ;
+        grid-template-columns: 15% auto 20%;
+        grid-template-rows: 35vh 1fr 25vh 1fr;
+        /* Espacios */
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+    
+     
+     /* FLEXs */
+     .menuFlex {
+         display: flex;
+         flex-flow: column nowrap;   
+     }
+     .flexProductos {
+         display: flex;
+         flex-flow: row nowrap;
+    
+     }
+}
+
